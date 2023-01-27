@@ -1,0 +1,245 @@
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    top: 30px;
+    left: 30px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 50%;
+
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 998;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  .footer {
+    background-color: #ff4757;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* footer at bottom of page */
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    /* footer should hit left and right of page */
+    left: 0;
+    right: 0;
+    /* footer should be fixed */
+    z-index: 1;
+
+    /* for mobile */
+    @media (max-width: 600px) {
+      padding: 1%;
+      font-size: 12px;
+    }
+  }
+
+  .h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff4757;
+  }
+
+  .header {
+    background-color: #ff4757;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* header at top of page */
+    top: 0;
+    width: 50%;
+    text-align: center; 
+    /* header should be 20px from left and right of page */
+    left: 25%;
+    right: 25%;
+    /* header should be fixed */
+    z-index: 1;
+  }
+
+  .tbl-30 {
+    /* Should start under header */
+    top: 20%;
+    width: 50%;
+    text-align: center;
+    box-sizing: content-box;
+    /* Should hit left and right of page */
+    left: 25%;
+    right: 25%;
+    /* Should be fixed */
+    z-index: 1;
+    table-layout: auto;
+
+    /* for mobile */
+    @media (max-width: 900px) {
+      top: 20%;
+      width: 60%;
+      text-align: center;
+      /* Should hit left and right of page */
+      left: 20%;
+      right: 20%;
+      /* Should be fixed */
+      z-index: 1;
+      overflow-x: auto;
+      display: block;
+      table-layout: auto;
+
+      /* Make table fit screen  so no need to zoom in */
+      font-size: 12px;
+    }
+
+  }
+
+  .tbl-30 tr {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    left: 10%;
+    right: 10%;
+
+    /* for mobile */
+    @media (max-width: 900px) {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      font-size: 100%;
+      font-weight: bold;
+      left: 0%;
+      right: 0%;
+    }
+  }
+
+  .tbl-30 td {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    /* Make input fields fit screen */
+
+    /* for mobile */
+    @media (max-width: 900px) {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      left: 0%;
+      right: 0%;
+    }
+  }
+
+  .tbl-30 input {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    /* Make input fields fit screen */
+
+    /* for mobile */
+    @media (max-width: 900px) {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      left: 0%;
+      right: 0%;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+
+    /* for mobile */
+    @media (max-width: 900px) {
+      text-align: center;
+    }
+  }
+
+
+
+  .main-content {
+    /* Should start under header */
+    top: 20%;
+  }
+
+  @media screen and (max-width: 900px) {
+    .menu__box {
+      width: 100%;
+    }
+    .menu__item {
+      font-size: 16px;
+    }
+    .wrapper {
+      padding: 10px;
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+  }

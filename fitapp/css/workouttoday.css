@@ -1,0 +1,107 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+td, th, input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* For iphone xs */
+@media only screen and (max-device-width: 950px)
+{
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { 
+        border: 1% solid #ccc; 
+        width: 100%;
+    }
+
+    td { 
+        /* Behave like a "row" */
+        border: none;
+        border-bottom: 1% solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+        text-align: center;
+        width: 100%;
+        left: 0%;
+        margin-left: auto;
+    }
+
+    td:before { 
+        /* Now like a table header */
+        position: absolute;
+        top: 6%;
+        left: 6%;
+        width: 45%; 
+        padding-right: 10%; 
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+        margin-left: auto;
+
+    }
+
+    
+
+
+
+    /*
+    Label the data
+    */
+    /* Hide all data labels except the first one */
+    /*
+    td:nth-of-type(1):before { content: "Nr."; }
+    td:nth-of-type(2):before { content: "Workout"; }
+    td:nth-of-type(3):before { content: "Weight"; }
+    td:nth-of-type(4):before { content: "Reps"; }
+    td:nth-of-type(5):before { content: "Edit"; }
+    td:nth-of-type(6):before { content: "Delete"; }
+    */
+}
+
+button.button {
+    border-radius: 100rem;
+    padding: 1rem;
+    font-family: 'Avenir Next';
+    font-size: 1rem;
+    padding: .5rem 3rem;
+    color: black;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+  }
+  
+  button.button:hover {
+    box-shadow: none;
+    color: white;
+  }
