@@ -33,10 +33,10 @@ session_start();
 
 //Repeating values
 define('SITEURL', 'https://fitapp.yjilderda.nl/');
-define('LOCALHOST', 'localhost');
-define('DB_USERNAME', 'yjilderda_nl_fitapp');
-define('DB_PASSWORD', 'hsat7ypj2h4u');
-define('DB_NAME', 'yjilderda_nl_fitapp');
+define('LOCALHOST', '');
+define('DB_USERNAME', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', '');
 
 
 $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database connection
